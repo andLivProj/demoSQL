@@ -13,10 +13,13 @@ public class Raspunsuri {
     private Long id;
 
     @Column(length = 1000)
-    private String variantaA;
+    private String varA;
 
     @Column(length = 1000)
-    private String variantaB;
+    private String varB;
+
+    @Column(length = 1)
+    private String raspunsCorect;
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "intrebare_id")

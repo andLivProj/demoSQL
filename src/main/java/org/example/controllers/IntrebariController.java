@@ -1,9 +1,8 @@
 package org.example.controllers;
 
-import org.example.model.Intrebari;
+import org.example.DTO.IntrebariDTO;
 import org.example.services.IntrebariService;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -17,13 +16,16 @@ public class IntrebariController {
         this.intrebariService = intrebariService;
     }
 
-    @GetMapping("/cautaIntrebariExamen/{id}")
-    public List<Intrebari> getIntrebariByExamen(@PathVariable int id) {
-        return intrebariService.getIntrebariByExamen(id);
+
+    @GetMapping("/numaraIntrebari")
+    public Integer getCountIntrebariByExamen() {
+        List<IntrebariDTO> toateIntrebarile =  intrebariService.getAllIntrebari();
+        return toateIntrebarile.size();
     }
 
-    @GetMapping("/numaraIntrebariExamen/{id}")
-    public Integer getCountIntrebariByExamen(@PathVariable int id) {
-        return intrebariService.countIntrebariByExamen(id);
+    @GetMapping("/toateIntrebarile")
+    public List<IntrebariDTO> getAllIntrebari() {
+        return intrebariService.getAllIntrebari();
     }
+
 }
