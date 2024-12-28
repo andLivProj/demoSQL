@@ -12,7 +12,7 @@ public class RaspunsuriDTO {
     private String intrebareText; // The text of the question
 
 
-    public RaspunsuriDTO(long id, String raspunsCorect, String varA, String varB, Long intrebareId, String intrebareText) {
+    public RaspunsuriDTO(long id, String intrebareText, String raspunsCorect, String varA, String varB, Long intrebareId) {
         this.id = id;
         this.raspunsCorect = raspunsCorect;
         this.varA = varA;

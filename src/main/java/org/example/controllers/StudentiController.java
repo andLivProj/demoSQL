@@ -17,10 +17,9 @@ public class StudentiController {
     }
 
     @GetMapping("totiStudentii")
-    public List<StudentiDTO> getAllStudenti() {
+    public List<String> getAllStudenti() {
         return studentiService.getAllStudenti();
     }
-
 
     @GetMapping("studentiTestati")
     public List<StudentiDTO> getAllStudentiTestati() {

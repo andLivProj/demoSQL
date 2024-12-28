@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class IntrebariService {
@@ -17,8 +18,9 @@ public class IntrebariService {
         this.intrebariRepository = intrebariRepository;
     }
 
-    public List<IntrebariDTO> getAllIntrebari() {
-        return intrebariRepository.getAllIntrebari();
+    public List<String> getAllIntrebari() {
+        List<IntrebariDTO> tabelaIntrebari= intrebariRepository.getAllIntrebari();
+        return tabelaIntrebari.stream().map(IntrebariDTO::getIntrebare).collect(Collectors.toList());
     }
 
     public List<IntrebariDTO> getAllIntrebariDupaExamen(Long examenId) {

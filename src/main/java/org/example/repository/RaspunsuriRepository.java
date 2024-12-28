@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface RaspunsuriRepository extends JpaRepository<Raspunsuri, Long> {
 
-    @Query("SELECT new org.example.DTO.RaspunsuriDTO(r.id, r.raspunsCorect, r.varA, r.varB,i.id, i.intrebare) " +
+    @Query("SELECT new org.example.DTO.RaspunsuriDTO(r.id, i.intrebare, r.raspunsCorect, r.varA, r.varB,i.id) " +
             "FROM Raspunsuri r Join r.intrebare_id i" )
     List<RaspunsuriDTO> getAllRaspunsuri();
 
