@@ -1,6 +1,5 @@
 package org.example.repository;
 
-import org.example.DTO.ExameneDTO;
 import org.example.DTO.StudentiDTO;
 import org.example.model.Studenti;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -16,7 +15,13 @@ public interface StudentiRepository extends JpaRepository<Studenti, Long> {
     @Query("SELECT new org.example.DTO.StudentiDTO(s.nume, s.prenume, s.email, e.examen, e.dataExamen, s.sustinutExamen) " +
             "FROM Studenti s " +
             "Join s.inscriereStudenti i  " +
+            "join i.examen_id e ")
+    List<StudentiDTO> getAllTestedStudents();
+
+    @Query("SELECT new org.example.DTO.StudentiDTO(s.nume, s.prenume, s.email, e.examen, e.dataExamen, s.sustinutExamen, e.totalIntrebari, i.nota) " +
+            "FROM Studenti s " +
+            "Join s.inscriereStudenti i  " +
             "join i.examen_id e " +
             "where s.sustinutExamen = TRUE")
-    List<StudentiDTO> getAllTestedStudents();
+    List<StudentiDTO> getAllStudentiCerinta();
 }

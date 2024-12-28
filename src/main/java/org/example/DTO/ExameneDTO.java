@@ -16,4 +16,6 @@ public class ExameneDTO {
         this.dataExamen = dataExamen;
         this.totalIntrebari = totalIntrebari;
     }
+
+
 }

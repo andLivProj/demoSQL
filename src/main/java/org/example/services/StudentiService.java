@@ -24,4 +24,9 @@ public class StudentiService {
     public List<StudentiDTO> getAllStudentiTestati() {
         return studentiRepository.getAllTestedStudents();
     }
+
+    public List<StudentiDTO> getAllStudentiCerinta() {
+        return studentiRepository.getAllStudentiCerinta();
+    }
+
 }

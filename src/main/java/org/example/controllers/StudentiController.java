@@ -25,4 +25,9 @@ public class StudentiController {
     public List<StudentiDTO> getAllStudentiTestati() {
         return studentiService.getAllStudentiTestati();
     }
+
+    @GetMapping("studentiCerinta")
+    public List<StudentiDTO> getAllStudentiCerinta() {
+        return studentiService.getAllStudentiCerinta();
+    }
 }
