@@ -2,7 +2,7 @@
 INSERT INTO examene (examen, data_examen, total_intrebari) VALUES ('Matematica', '2024-06-01', 6), ('Informatica', '2024-06-02', 6), ('Fizica', '2024-06-03', 6), ('Chimie', '2024-06-04', 6);
 
 -- Inserts for Studenti
-INSERT INTO studenti (nume, prenume, email) VALUES('Popescu', 'Ion', 'ion.popescu@example.com'),('Ionescu', 'Maria', 'maria.ionescu@example.com'),('Georgescu', 'Andrei', 'andrei.georgescu@example.com'),('Dumitrescu', 'Ana', 'ana.dumitrescu@example.com'),('Vasilescu', 'Mihai', 'mihai.vasilescu@example.com'),('Petrescu', 'Elena', 'elena.petrescu@example.com'),('Marinescu', 'Cristian', 'cristian.marinescu@example.com'),('Stoica', 'Alexandra', 'alexandra.stoica@example.com'),('Grigorescu', 'Raluca', 'raluca.grigorescu@example.com'),('Ciobanu', 'Victor', 'victor.ciobanu@example.com');
+INSERT INTO studenti (nume, prenume, email, sustinut_examen) VALUES('Popescu', 'Ion', 'ion.popescu@example.com', true),('Ionescu', 'Maria', 'maria.ionescu@example.com', true),('Georgescu', 'Andrei', 'andrei.georgescu@example.com', true),('Dumitrescu', 'Ana', 'ana.dumitrescu@example.com', true),('Vasilescu', 'Mihai', 'mihai.vasilescu@example.com', false),('Petrescu', 'Elena', 'elena.petrescu@example.com', false),('Marinescu', 'Cristian', 'cristian.marinescu@example.com', false),('Stoica', 'Alexandra', 'alexandra.stoica@example.com', true),('Grigorescu', 'Raluca', 'raluca.grigorescu@example.com', false),('Ciobanu', 'Victor', 'victor.ciobanu@example.com', true);
 
 -- Inserts for Inscrieri
 Insert into inscrieri (student_id, examen_id) values (1, 2), (1, 4), (2,2), (3,2), (4, 1), (4, 2);

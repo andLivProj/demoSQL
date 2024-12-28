@@ -12,4 +12,11 @@ public interface StudentiRepository extends JpaRepository<Studenti, Long> {
 
     @Query("SELECT new org.example.DTO.StudentiDTO(s.nume, s.prenume, s.email) FROM Studenti s")
     List<StudentiDTO> getAllStudents();
+
+    @Query("SELECT new org.example.DTO.StudentiDTO(s.nume, s.prenume, s.email, e.examen, e.dataExamen, s.sustinutExamen) " +
+            "FROM Studenti s " +
+            "Join s.inscriereStudenti i  " +
+            "join i.examen_id e " +
+            "where s.sustinutExamen = TRUE")
+    List<StudentiDTO> getAllTestedStudents();
 }

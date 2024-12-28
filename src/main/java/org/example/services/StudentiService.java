@@ -18,4 +18,8 @@ public class StudentiService {
     public List<StudentiDTO> getAllStudenti() {
         return studentiRepository.getAllStudents();
     }
+
+    public List<StudentiDTO> getAllStudentiTestati() {
+        return studentiRepository.getAllTestedStudents();
+    }
 }

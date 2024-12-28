@@ -20,4 +20,10 @@ public class StudentiController {
     public List<StudentiDTO> getAllStudenti() {
         return studentiService.getAllStudenti();
     }
+
+
+    @GetMapping("studentiTestati")
+    public List<StudentiDTO> getAllStudentiTestati() {
+        return studentiService.getAllStudentiTestati();
+    }
 }

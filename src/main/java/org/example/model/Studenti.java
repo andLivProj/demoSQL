@@ -18,11 +18,13 @@ public class Studenti {
     @Column(length = 100)
     private String nume;
 
-    @Column( length = 100)
+    @Column(length = 100)
     private String prenume;
 
     @Column(length = 100, unique = true)
     private String email;
+
+    private Boolean sustinutExamen;
 
     @OneToMany(mappedBy = "student_id", orphanRemoval = true, cascade = CascadeType.ALL)
     private List<Inscrieri> inscriereStudenti;
