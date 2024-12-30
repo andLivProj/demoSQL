@@ -2,7 +2,6 @@ package org.example.services;
 
 import org.example.DTO.IntrebariDTO;
 import org.example.repository.IntrebariRpository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,7 +12,6 @@ public class IntrebariService {
 
     private final IntrebariRpository intrebariRepository;
 
-    @Autowired
     public IntrebariService(IntrebariRpository intrebariRepository) {
         this.intrebariRepository = intrebariRepository;
     }

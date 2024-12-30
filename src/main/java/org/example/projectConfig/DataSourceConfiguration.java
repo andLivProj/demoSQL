@@ -19,7 +19,7 @@ public class DataSourceConfiguration {
     public DataSource customDataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
 //        dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://192.168.0.100:3306/demoSqlInfoAcademy?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC");
+        dataSource.setUrl("jdbc:mysql://192.168.0.101:3306/demoSqlInfoAcademy?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC");
         dataSource.setUsername("root");
         dataSource.setPassword("apa_plata");
 
