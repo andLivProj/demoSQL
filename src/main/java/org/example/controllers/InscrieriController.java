@@ -5,6 +5,7 @@ import org.example.services.InscrieriService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.List;
 
 @RestController
@@ -17,7 +18,12 @@ public class InscrieriController {
     }
 
     @GetMapping("/noteExamene")
-    public List<InscrieriDTO> exemenePromovate(){
-        return inscrieriService.calculeazaProcentaj();
+    public List<InscrieriDTO> afiseazaInscrierile(){
+        return inscrieriService.afiseazaNote();
+    }
+
+    @GetMapping("/procentPromovare")
+    public HashMap<String, Float> exemenePromovate(){
+        return inscrieriService.calcualeazaProcentPromoPerExamen();
     }
 }
